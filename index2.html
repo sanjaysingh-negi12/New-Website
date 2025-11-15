@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* --- Color Variables --- */
+:root {
+    /* Background colors from previous examples */
+    --main-orange: #FF7700;
+    --text-overlay-color: rgba(255, 119, 0, 0.4);
+    
+    /* Content colors */
+    --main-text-color: #FFFFFF;
+    --button-bg-color: #385FB1; /* Blue from the image */
+    --button-text-color: #FFFFFF;
+    --link-text-color: #F8F8F8;
+    --copyright-color: #FFFFFF;
+    --form-border-color: #F8F8F8;
+}
+
+/* Base Style for the Entire Page */
+.stackman-page {
+    /* Set up the container */
+    position: relative; /* CRITICAL for positioning the copyright footer */
+    min-height: 100vh; /* Takes up at least the full screen height */
+    width: 100%;
+      
+    /* Background Styling (Using the previous "STACKMAN" text pattern) */
+    background-color: var(--main-orange); 
+    overflow: hidden; /* Contains the absolute background text */
+    
+    /* Background Pattern - Use multiple absolute elements OR a background image technique here. 
+       For simplicity, we are setting up the structure that was defined in the previous interaction 
+       where the "STACKMAN" text was placed behind this section. */
+}
+
+/* 1. Central Content Box Styling */
+.content-box {
+    /* Center the box content both horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    /* Positioning the box in the middle of the screen */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Max width to keep the lines short like in the image */
+    max-width: 700px;
+    padding: 20px;
+}
+
+.main-title {
+    color: var(--main-text-color);
+    font-size: clamp(2.5em, 5vw, 4em); /* Responsive font size */
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.2em;
+}
+
+.subtitle {
+    color: var(--main-text-color);
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+}
+
+/* --- CTA Button --- */
+.cta-button {
+    text-decoration: none;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 3em;
+    transition: background-color 0.3s;
+}
+
+/* --- Email Form Styling --- */
+.email-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Space between label and input */
+    max-width: 100%;
+}
+
+.form-label {
+    color: var(--link-text-color);
+    font-size: 0.9em;
+    white-space: nowrap; /* Keeps the text on one line */
+}
+
+.email-input {
+    /* Match the style from the previous image: orange background, white border */
+    background-color: transparent;
+    border: 1px solid var(--form-border-color);
+    border-radius: 20px; /* Fully rounded corners */
+    color: var(--form-border-color);
+    padding: 8px 15px;
+    font-size: 1em;
+    width: 200px; /* Fixed width for the input box */
+}
+.email-input::placeholder {
+    color: var(--form-border-color);
+    opacity: 0.7;
+}
+
+
+/* 2. Copyright Notice Styling (Bottom Right) */
+.copyright {
+    position: absolute; /* CRITICAL: Positioning it relative to the .stackman-page */
+    right: 20px;      /* Distance from the right edge */
+    bottom: 20px;     /* Distance from the bottom edge */
+    color: var(--copyright-color);
+    font-size: 0.8em;
+    opacity: 0.7;
+    font-family: sans-serif;
+}
+        </style>
+</head>
+<body>
+    <section class="stackman-page">
+    <div class="content-box">
+        <h1 class="main-title">WE'RE MAKING ROOM<br>FOR A WHOLE LOT MORE!</h1>
+        <p class="subtitle">Full Website Launch Coming Soon...</p>
+
+        <a href="#" class="cta-button">Shop Stackman on Amazon</a>
+
+        <form class="email-form">
+            <span class="form-label">Keep me in the loop for new product offers:</span>
+            <input type="email" class="email-input" placeholder="Enter your email">
+        </form>
+    </div>
+
+    <footer class="copyright">
+        ©2025 Stackman™
+    </footer>
+</section>
+</body>
+</html>
