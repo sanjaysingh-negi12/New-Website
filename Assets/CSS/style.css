@@ -321,3 +321,11 @@ body{
  overflow: hidden !important;
 } 
 }
+/* Safari ONLY */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-touch-callout: none) {
+    .stackman-section  {
+      overflow: hidden !important;
+    }
+  }
+}
