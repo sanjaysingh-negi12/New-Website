@@ -84,7 +84,7 @@ letter-spacing: 0.4px;
     height: 100vh; /* Takes up full screen height */
    
   position: relative;
-    
+            overflow: auto;
     /* 2. Flexbox for Tiling */
    
     background-image: url(../Images/Layer\ 1.png);
@@ -94,9 +94,9 @@ background-repeat: no-repeat;
     background-size: 78% 148%;
      background-position: center;
 }
-.stackman-section::-webkit-scrollbar {
+/* .stackman-section::-webkit-scrollbar {
     display: none;   /* Safari + Chrome */
-}
+
 .MainContainer {
     display: flex
 ;
