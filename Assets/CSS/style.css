@@ -18,7 +18,7 @@
 body{
      background-color: var(--main-orange); 
  margin: 0;
- overflow: hidden !important;
+
 } 
 
 h1{
@@ -283,7 +283,7 @@ h4{
 .CopyRight {
 
     right: 50%;
-    
+    bottom: 70px;
     transform: translateX(50%);
 }
 .stackman-section {
